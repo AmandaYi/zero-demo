@@ -1,0 +1,16 @@
+Name: 'transform.rpc'
+ListenOn: '0.0.0.0:8090'
+Etcd:
+  Hosts:
+  - '127.0.0.1:2379'
+  Key: 'transform.rpc'
+
+DataSource: "gozero:PsBKFwr2ZYAxC7Bk@tcp(127.0.0.1:3306)/gozero"
+Table: '1shorturl'
+
+CacheRedis123:
+  - Host: '127.0.0.1:6379'
+    Pass: '123456'
+    Type: 'node'
+
+# 配置redis的时候，需要使用引号括起来字符串，比如Pass，可以参考结构体类型定义字段类型

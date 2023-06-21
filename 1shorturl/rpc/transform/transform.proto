@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package transform;
+//goctl rpc -o transform2.proto
+
+// goctl rpc protoc .\transform.proto --go_out=./pb --go-grpc_out=./pb --zrpc_out=.
+
+option go_package = "./types/transform";
+
+//根据真实的url返回短连接
+message realUrlToShortLinkReq {
+  string realUrl = 1;
+}
+message realUrlToShortLinkResp {
+  string shortLink = 1;
+}
+
+// 根据短连接返回真实的url
+message shortLinkToRealUrlReq {
+  string shortLink = 1;
+}
+message shortLinkToRealUrlResp {
+  string realUrl = 1;
+}
+
+// rpc接口 tcp连接
+service transform {
+  // 根据真实的url返回短连接
+  rpc GetShortLinkByRealUrl(realUrlToShortLinkReq) returns (realUrlToShortLinkResp);
+  // 根据短连接返回真实的url
+  rpc GetRealUrlByShortLink(shortLinkToRealUrlReq) returns (shortLinkToRealUrlResp);
+}
+

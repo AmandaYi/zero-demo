@@ -1,0 +1,30 @@
+syntax = "v1"
+type (
+	realUrlToShortLinkReq {
+		RealUrl string `form:"realUrl"`
+	}
+	realUrlToShortLinkResp {
+		ShortLink string `json:"shortLink"`
+	}
+)
+
+type (
+	shortLinkToRealUrlReq {
+		ShortLink string `form:"shortLink"`
+	}
+	shortLinkToRealUrlResp {
+		RealUrl string `json:"realUrl"`
+	}
+)
+service shorturl-api {
+	//	根据短连接得到url
+	@server(
+		handler: GetRealUrlByShortLinkHandler
+	)
+	get /short/to/url (shortLinkToRealUrlReq) returns (shortLinkToRealUrlResp)
+	//	根据url得到短连接
+	@server(
+		handler: GetShortLinkByRealUrlHandler
+	)
+	get /url/to/short (realUrlToShortLinkReq) returns (realUrlToShortLinkResp)
+}
