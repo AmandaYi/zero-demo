@@ -10,7 +10,7 @@ func main() {
 	sub, err := discov.NewSubscriber([]string{"http://127.0.0.1:2379"}, "person", discov.Exclusive())
 	fmt.Println(err)
 	sub.AddListener(func() {
-		fmt.Println("有值")
+		fmt.Println("监听到了哦")
 	})
 	ticker := time.NewTicker(time.Second * 3)
 	defer ticker.Stop()
