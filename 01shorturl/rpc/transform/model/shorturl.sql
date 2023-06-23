@@ -5,6 +5,6 @@ CREATE TABLE `shorturl`
     PRIMARY KEY (`short_link`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---  goctl model mysql ddl --src .\1shorturl.sql --dir .
+--  goctl model mysql ddl --src .\01shorturl.sql --dir .
 -- [convertColumns]: The column "real_url" is recommended to add constraint `DEFAULT`
--- goctl model mysql ddl --src .\1shorturl.sql --dir . --cache 带缓存模式
+-- goctl model mysql ddl --src .\01shorturl.sql --dir . --cache 带缓存模式

@@ -6,7 +6,7 @@ Etcd:
   Key: 'transform.rpc'
 
 DataSource: "gozero:PsBKFwr2ZYAxC7Bk@tcp(127.0.0.1:3306)/gozero"
-Table: '1shorturl'
+Table: '01shorturl'
 
 CacheRedis123:
   - Host: '127.0.0.1:6379'

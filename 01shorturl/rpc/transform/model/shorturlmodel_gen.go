@@ -21,7 +21,7 @@ var (
 	shorturlRowsExpectAutoSet   = strings.Join(stringx.Remove(shorturlFieldNames, "`create_at`", "`create_time`", "`created_at`", "`update_at`", "`update_time`", "`updated_at`"), ",")
 	shorturlRowsWithPlaceHolder = strings.Join(stringx.Remove(shorturlFieldNames, "`short_link`", "`create_at`", "`create_time`", "`created_at`", "`update_at`", "`update_time`", "`updated_at`"), "=?,") + "=?"
 
-	cacheShorturlShortLinkPrefix = "cache:1shorturl:shortLink:"
+	cacheShorturlShortLinkPrefix = "cache:01shorturl:shortLink:"
 )
 
 type (
@@ -46,7 +46,7 @@ type (
 func newShorturlModel(conn sqlx.SqlConn, c cache.CacheConf, opts ...cache.Option) *defaultShorturlModel {
 	return &defaultShorturlModel{
 		CachedConn: sqlc.NewConn(conn, c, opts...),
-		table:      "`1shorturl`",
+		table:      "`01shorturl`",
 	}
 }
 
