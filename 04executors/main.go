@@ -21,6 +21,7 @@ func (dts *DailyTask) initBulkExecutor() {
 				dts.deal(v)
 			}
 		},
+		//这俩条件只要满足一个就开始拿出所有的任务进行执行了
 		executors.WithBulkInterval(time.Second*3), // 3s会自动刷一次container中task去执行
 		executors.WithBulkTasks(4),                // container最大task数。一般设为2的幂次
 	)
