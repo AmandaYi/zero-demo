@@ -1,4 +1,4 @@
-module zero-demo
+module 07tokenlimit
 
 go 1.20
 
