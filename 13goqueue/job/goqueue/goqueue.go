@@ -1,9 +1,9 @@
 package main
 
 import (
-	"13goqueue/api/goqueue/internal/config"
-	"13goqueue/api/goqueue/internal/handler"
-	"13goqueue/api/goqueue/internal/svc"
+	"13goqueue/job/goqueue/internal/config"
+	"13goqueue/job/goqueue/internal/handler"
+	"13goqueue/job/goqueue/internal/svc"
 	"flag"
 	"fmt"
 	"github.com/zeromicro/go-zero/core/conf"

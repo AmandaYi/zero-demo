@@ -1,7 +1,7 @@
 package svc
 
 import (
-	"13goqueue/api/goqueue/internal/config"
+	"13goqueue/job/goqueue/internal/config"
 	"github.com/zeromicro/go-queue/dq"
 )
 

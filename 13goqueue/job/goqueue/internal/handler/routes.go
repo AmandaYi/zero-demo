@@ -1,11 +1,11 @@
 package handler
 
 import (
-	"13goqueue/api/goqueue/internal/logic"
+	"13goqueue/job/goqueue/internal/logic"
 	"context"
 	"github.com/zeromicro/go-zero/core/service"
 
-	"13goqueue/api/goqueue/internal/svc"
+	"13goqueue/job/goqueue/internal/svc"
 )
 
 func RegisterJob(serverCtx *svc.ServiceContext, group *service.ServiceGroup) {
