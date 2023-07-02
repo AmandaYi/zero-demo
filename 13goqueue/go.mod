@@ -1,10 +1,14 @@
-module zero-demo
+module 13goqueue
 
 go 1.20
 
-require github.com/zeromicro/go-zero v1.5.3
+require (
+	github.com/zeromicro/go-queue v1.1.8
+	github.com/zeromicro/go-zero v1.5.3
+)
 
 require (
+	github.com/beanstalkd/go-beanstalk v0.2.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cenkalti/backoff/v4 v4.2.0 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect

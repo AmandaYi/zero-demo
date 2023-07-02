@@ -1,0 +1,17 @@
+Name: job
+
+Log:
+  ServiceName: job
+  Level: info
+
+#dq依赖Beanstalks、redis ，Beanstalks配置、redis配置
+DqConf:
+  Beanstalks:
+    - Endpoint: 127.0.0.1:7771
+      Tube: tube1
+    - Endpoint: 127.0.0.1:7772
+      Tube: tube2
+  Redis:
+    Host: 127.0.0.1:6379
+    Type: node
+
