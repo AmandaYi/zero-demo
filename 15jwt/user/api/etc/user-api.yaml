@@ -1,0 +1,8 @@
+Name: user-api
+Host: 0.0.0.0
+Port: 8890
+
+
+Auth:
+  AccessSecret: ad879037-c7a4-4063-9236-6bfc35d54b7d
+  AccessExpire: 86400
